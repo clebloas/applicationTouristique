@@ -1,11 +1,11 @@
-#Administrateur
+# Administrateur
 A l'ensemble des droits d'un modérateur et utilisateur
 Peut suivre les requetes échoués#Pourquoi
                                 
 Peut ajouter du contenu riche à un POI, trajet
 Peut référencer du contenu via wikipedia
 
-#Utilisateur
+# Utilisateur
 
 
 Peut reporter des commentaires injurieux
@@ -15,11 +15,11 @@ Peut proposer/suggérer un itinéraire
 Peut rechercher une activité, POI, itinéraire
 Réalité augmenté pour s'orienté vers le lieu voulu
 
-#Serveur de contenu
+# Serveur de contenu
 Peut suggérer du contenu depuis Wikipedia
 
 
-#Modérateur
+# Modérateur
 Peut ajouter du contenu dans sa région
 Peut éditer le contenu qu'il a créé
 Peut suggérer une modification d'un contenu ne lui appartenant pas
