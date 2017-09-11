@@ -6,8 +6,44 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <changeSet id="20170806" author="christopher">
-        <createTable tableName="temp">
-            <column name="fakecolumn" type="varchar(255)"/>
+        <createTable tableName="user">
+            <column name="id" type="varchar(100)" >
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="login" type="varchar(100)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="firstname" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
+
+        <createTable tableName="user_role">
+            <column name="user_id" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="type" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="user_role" columnNames="user_id"/>
+        <addForeignKeyConstraint baseTableName="user_role" baseColumnNames="user_id" constraintName="fk_user_role_user_id" referencedTableName="user"
+                                 referencedColumnNames="id"/>
+
+        <createTable tableName="credentials">
+            <column name="user_id" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="varchar(100)" >
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="credentials" columnNames="user_id"/>
+        <addForeignKeyConstraint baseTableName="credentials" baseColumnNames="user_id" constraintName="fk_credentials_user_id" referencedTableName="user"
+                                 referencedColumnNames="id"/>
     </changeSet>
+
 </databaseChangeLog>

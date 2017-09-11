@@ -1,12 +1,12 @@
-package com.cercle.applicationtouristique.applicationtouristique;
+package com.cercle.applicationtouristique;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApplicationTouristiqueApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApplicationTouristiqueApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }
