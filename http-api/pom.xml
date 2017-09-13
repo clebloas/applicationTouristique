@@ -56,10 +56,12 @@
             </plugin>
             <plugin>
                 <groupId>com.spotify</groupId>
-                <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.3.4</version>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.0.0</version>
                 <configuration>
-                    <repository>${docker.image.prefix}/${project.groupId}-${project.artifactId}</repository>
+                    <baseImage>java</baseImage>
+		    <dockerDirectory>${project.basedir}/docker</dockerDirectory>
+                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                     <buildArgs>
                         <PACKAGED_ARTIFACT_FILENAME>${project.build.finalName}.${project.packaging}</PACKAGED_ARTIFACT_FILENAME>
                     </buildArgs>
