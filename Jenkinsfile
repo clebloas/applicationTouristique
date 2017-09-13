@@ -1,6 +1,6 @@
 node{
     
-    def mvn = tool("M3") + "/bin/mvn"
+    def mvn = tool("maven-tool") + "/bin/mvn"
     def DOCKER_IMAGE_NAME = "applicationTourisque"
 
     stage('Build'){
