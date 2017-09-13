@@ -1,8 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-ARG PACKAGED_ARTIFACT_FILENAME
-
-ADD target/${PACKAGED_ARTIFACT_FILENAME} /app.jar
+ADD target/applicationTouristique.jar /app.jar
 
 ENV JAVA_OPTS=""
 

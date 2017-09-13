@@ -59,13 +59,9 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.0.0</version>
                 <configuration>
-		    <imageName>applicationTouristique]</imageName>
+		    <imageName>applicationTouristique</imageName>
                     <baseImage>java</baseImage>
 		    <dockerDirectory>${project.basedir}/docker</dockerDirectory>
-                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-                    <buildArgs>
-                        <PACKAGED_ARTIFACT_FILENAME>${project.build.finalName}.${project.packaging}</PACKAGED_ARTIFACT_FILENAME>
-                    </buildArgs>
                 </configuration>
                 <executions>
                     <execution>
