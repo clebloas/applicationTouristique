@@ -4,7 +4,7 @@ node{
     def DOCKER_IMAGE_NAME = "applicationTourisque"
 echo "mvn= ${mvn}"
     stage('Build'){
-	    sh '${mvn} clean package'
+	    sh "${mvn} clean package"
     }
 
     stage('Push image'){
