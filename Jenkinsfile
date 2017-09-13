@@ -2,7 +2,7 @@ node{
     
     def mvn = tool("maven-tool") + "/bin/mvn"
     def DOCKER_IMAGE_NAME = "applicationTourisque"
-
+echo "mvn= ${mvn}"
     stage('Build'){
 	    sh '${mvn} clean package'
     }
