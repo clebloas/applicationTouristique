@@ -15,7 +15,7 @@ node{
 			def image = docker.image(DOCKER_IMAGE_NAME)
 				image.push("latest")
 
-				dockerFingerprintFrom dockerfile: 'http-api/docker/Dockerfile', image: DOCKER_IMAGE_NAME
+				dockerFingerprintFrom dockerfile: 'http-api/Dockerfile', image: DOCKER_IMAGE_NAME
 		}
 	}
 
