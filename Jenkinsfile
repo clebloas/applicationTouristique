@@ -6,17 +6,7 @@ node{
 		stage("checkout source"){
 			checkout scm
 		}
-	stage('Build'){
+	stage('Build and push image'){
 		sh "${mvn} clean package"
 	}
-
-	stage('Push image'){
-		docker.withRegistry(env.DOCKER_REGISTRY_URL, 'DOCKER_REGISTRY_USER') {
-			def image = docker.image(DOCKER_IMAGE_NAME)
-				image.push("latest")
-
-				dockerFingerprintFrom dockerfile: 'http-api/Dockerfile', image: DOCKER_IMAGE_NAME
-		}
-	}
-
 }
