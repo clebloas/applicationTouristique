@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-ADD target/http-api-0.0.1-SNAPSHOT.jar /app.jar
+ADD target/main-0.0.1-SNAPSHOT.jar /app.jar
 
 ENV JAVA_OPTS=""
 
